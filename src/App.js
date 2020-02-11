@@ -1,22 +1,24 @@
 import React from "react";
-// import { useDispatch } from "react-redux";
-// import "./app/App.css";
 import { Router, Switch, Link } from "react-router-dom";
+
 import { history, routes, RouteWithSubRoutes } from "./routes";
+
+import { AppContainer,GlobalStyle,StyledSideBar,MenuList, StyledMenuItem} from './app/app.styles';
+
 
 const App = () => {
   return (
     <Router history={history}>
-      <aside>
+      <StyledSideBar>
         <span>Sidebar</span>
-        <ul>
+        <MenuList>
           {routes.map(r => (
-            <li key={r.path}>
-              <Link to={r.path}>{r.id}</Link>
-            </li>
+            <StyledMenuItem key={r.id}>
+              <Link  to={r.path}>{r.id}</Link>
+            </StyledMenuItem>
           ))}
-        </ul>
-      </aside>
+        </MenuList>
+      </StyledSideBar>
       <main>
         <Switch>
           {routes.map(r => (
