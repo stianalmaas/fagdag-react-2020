@@ -2,17 +2,16 @@ import React from "react";
 // import { useDispatch } from "react-redux";
 // import "./app/App.css";
 import { Router, Switch, Link } from "react-router-dom";
-import { history, routes, RouteWithSubroutes } from "./routes";
+import { history, routes, RouteWithSubRoutes } from "./routes";
 
 const App = () => {
-  // const dispatch = useDispatch();
   return (
     <Router history={history}>
       <aside>
         <span>Sidebar</span>
         <ul>
           {routes.map(r => (
-            <li>
+            <li key={r.path}>
               <Link to={r.path}>{r.id}</Link>
             </li>
           ))}
@@ -21,7 +20,7 @@ const App = () => {
       <main>
         <Switch>
           {routes.map(r => (
-            <RouteWithSubroutes {...r} />
+            <RouteWithSubRoutes key={r.path} {...r} />
           ))}
         </Switch>
       </main>

@@ -1,18 +1,17 @@
 import { takeLatest, call, put } from 'redux-saga/effects';
+import { APP_WATCH_GET_DATA } from './constants';
 
-export const APP_WATCH_GET_USERS = 'app/WATCH_GET_COMPANIES';
-export const getCompaniesAclWatchAction = (departmentId) => ({
-  type: APP_WATCH_GET_USERS,
-  departmentId,
-});
 
-export function* appGetUsersWorkerSaga(arg) {
+const getDataOrSomething = departmentId => (`result: ${departmentId}`);
+
+function* appGetUsersWorkerSaga(arg) {
   const { departmentId } = arg;
-  console.log('appGetUsersWorkerSaga', departmentId);
+  const result = yield call(getDataOrSomething, departmentId);
+  console.log('appGetUsersWorkerSaga', result);
 }
 
 export function* appGetUserWatcherSaga() {
-  yield takeLatest(APP_WATCH_GET_USERS, appGetUsersWorkerSaga);
+  yield takeLatest(APP_WATCH_GET_DATA, appGetUsersWorkerSaga);
 }
 
 export default appGetUserWatcherSaga;

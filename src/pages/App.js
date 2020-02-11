@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import './app/App.css';
-import { getCompaniesAclWatchAction } from '../modules/app/sagas';
+import { getDataSagaWatchAction } from '../modules/app/actions';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -11,7 +11,7 @@ const App = () => {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <button onClick={() => dispatch(getCompaniesAclWatchAction(6))}>GetUsers</button>
+        <button onClick={() => dispatch(getDataSagaWatchAction(6))}>GetUsers</button>
         <a
           className="App-link"
           href="https://reactjs.org"
