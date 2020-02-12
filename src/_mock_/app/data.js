@@ -1,0 +1,61 @@
+export const users = [{
+  userId: 1,
+  first_name: "Roy",
+  last_name: "Dowry",
+  email: "rdowry0@myspace.com",
+  gender: "Male",
+}, {
+  userId: 2,
+  first_name: "Ken",
+  last_name: "Ixer",
+  email: "kixer1@japanpost.jp",
+  gender: "Male",
+}, {
+  userId: 3,
+  first_name: "Averill",
+  last_name: "Rochford",
+  email: "arochford2@wp.com",
+  gender: "Male",
+}, {
+  userId: 4,
+  first_name: "Fleming",
+  last_name: "Iacomettii",
+  email: "fiacomettii3@illinois.edu",
+  gender: "Male",
+}, {
+  userId: 5,
+  first_name: "Janeen",
+  last_name: "Walkley",
+  email: "jwalkley4@phoca.cz",
+  gender: "Female",
+}, {
+  userId: 6,
+  first_name: "Hershel",
+  last_name: "Pilbury",
+  email: "hpilbury5@vinaora.com",
+  gender: "Male",
+}, {
+  userId: 7,
+  first_name: "Ermentrude",
+  last_name: "Lies",
+  email: "elies6@php.net",
+  gender: "Female",
+}, {
+  userId: 8,
+  first_name: "Trumann",
+  last_name: "Rankin",
+  email: "trankin7@prlog.org",
+  gender: "Male",
+}, {
+  userId: 9,
+  first_name: "Francisca",
+  last_name: "Thal",
+  email: "fthal8@thetimes.co.uk",
+  gender: "Female",
+}, {
+  userId: 10,
+  first_name: "Leonora",
+  last_name: "Mariette",
+  email: "lmariette9@virginia.edu",
+  gender: "Female",
+}];
