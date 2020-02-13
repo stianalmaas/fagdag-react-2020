@@ -16,7 +16,7 @@ function* settingsGetUserWorkerSaga(args) {
     const user = yield call(getUser, userId);
     yield put(actions.getUserSuccess({ user }));
   } catch (e) {
-    yield put(actions.getUsersFailure(e))
+    yield put(actions.getUserFailure(e))
   }
 }
 

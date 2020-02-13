@@ -45,3 +45,14 @@ export const getUserSagaWatchAction = (userId) => ({
 export const getUsersSagaWatchAction = () => ({
   type: SETTINGS_WATCH_GET_USERS,
 });
+
+export default {
+  getUsers,
+  getUsersSuccess,
+  getUsersFailure,
+  getUser,
+  getUserSuccess,
+  getUserFailure,
+  getUserSagaWatchAction,
+  getUsersSagaWatchAction,
+};

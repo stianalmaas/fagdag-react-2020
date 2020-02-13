@@ -1,12 +1,11 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { Provider } from "react-redux";
-import "./index.css";
-import App from "./App";
-import * as serviceWorker from "./serviceWorker";
-import configureStore from "./redux/configureStore";
-import rootReducer from './redux/rootReducer';
-import { GlobalStyle } from "./app/app.styles";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import './index.css';
+import App from './App';
+import * as serviceWorker from './serviceWorker';
+import configureStore from './redux/configureStore';
+import { GlobalStyle } from './app/app.styles';
 
 const store = configureStore();
 
@@ -16,7 +15,7 @@ const renderApp = () => {
       <GlobalStyle />
       <App />
     </Provider>,
-    document.getElementById("root")
+    document.getElementById('root'),
   );
 };
 
