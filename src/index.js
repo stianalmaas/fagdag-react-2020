@@ -5,12 +5,14 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import configureStore from "./redux/configureStore";
+import { GlobalStyle } from "./app/app.styles";
 
 const store = configureStore();
 
 const renderApp = () => {
   ReactDOM.render(
     <Provider store={store}>
+      <GlobalStyle />
       <App />
     </Provider>,
     document.getElementById("root")
