@@ -1,5 +1,5 @@
 /* globals window */
-import { createStore, applyMiddleware, compose } from 'redux';
+import { applyMiddleware, compose, createStore } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import rootReducer from './rootReducer';
 import rootSaga from './rootSaga';
@@ -12,6 +12,7 @@ const configureStore = () => {
   const enhancer = composeEnhancers(
     applyMiddleware(sagaMiddleware),
   );
+
   const reduxStore = createStore(rootReducer, enhancer);
 
   // run the saga
