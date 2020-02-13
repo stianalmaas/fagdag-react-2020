@@ -1,10 +1,7 @@
-import React from "react";
-import { Router, Switch, Link } from "react-router-dom";
-
-import { history, routes, RouteWithSubRoutes } from "./routes";
-
-import { AppContainer,GlobalStyle,StyledSideBar,MenuList, StyledMenuItem} from './app/app.styles';
-
+import React from 'react';
+import { Link, Router, Switch } from 'react-router-dom';
+import { history, routes, RouteWithSubRoutes } from './routes';
+import { MenuList, StyledMenuItem, StyledSideBar } from './app/app.styles';
 
 const App = () => {
   return (
@@ -14,12 +11,12 @@ const App = () => {
         <MenuList>
           {routes.map(r => (
             <StyledMenuItem key={r.id}>
-              <Link  to={r.path}>{r.id}</Link>
+              <Link to={r.path}>{r.id}</Link>
             </StyledMenuItem>
           ))}
         </MenuList>
       </StyledSideBar>
-      <main>
+      <main style={{ 'paddingLeft': '14rem' }}>
         <Switch>
           {routes.map(r => (
             <RouteWithSubRoutes key={r.path} {...r} />
