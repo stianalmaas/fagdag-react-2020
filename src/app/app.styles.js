@@ -24,12 +24,27 @@ export const StyledMenuItem = styled.li`
 `;
 
 export const StyledSideBar = styled.aside`
-  height: 100%;
-  width: 200px;
+  width: 228px;
+  min-height: 100vh;
+  background: #122932;
   position: fixed;
-  background-color: var(--sonat-web-library-color-coal);
-  padding-top: 20px;
-  margin: 0;
+  color: white;
+  padding: 1.5rem;
+  font-weight: normal;
+  line-height: 2rem;
+`;
+
+export const StyledMain = styled.main`
+  display: block;
+  width: calc(100% - 208px);
+  flex: 1;
+  height: 100%;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 3rem;
 `;
 
 export const GlobalStyle = createGlobalStyle`
@@ -42,7 +57,7 @@ export const GlobalStyle = createGlobalStyle`
 
   :root {
     ${sonatWebLibraryColors};
-    font-family: 'SofiaPro', sans-serif;
+    font-family: 'Verdana', sans-serif;
   }
   #root, body, html {
     width: 100%;
