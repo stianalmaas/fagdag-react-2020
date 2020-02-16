@@ -1,5 +1,5 @@
 import React from 'react'
-import FilterLink from '../containers/FilterLink'
+import FilterLink from '../pages/todos/FilterLink'
 import { VisibilityFilters } from '../modules/todo/constants'
 
 const Filters = () => (

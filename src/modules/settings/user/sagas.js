@@ -1,9 +1,6 @@
 import { takeLatest, call, put } from 'redux-saga/effects';
-import {
-  SETTINGS_WATCH_GET_USERS,
-  SETTINGS_WATCH_GET_USER,
-} from './constants';
-import * as actions from './actions';
+import { sagaConstants as sc } from './';
+import { actions } from './';
 import { GetUser, GetUsers } from '../../mockApi';
 
 const getUser = userId => GetUser(userId);
@@ -31,11 +28,11 @@ function* settingsGetUsersWorkerSaga() {
 }
 
 function* settingsGetUserWatcherSaga() {
-  yield takeLatest(SETTINGS_WATCH_GET_USERS, settingsGetUserWorkerSaga);
+  yield takeLatest(sc.SETTINGS_WATCH_GET_USER, settingsGetUserWorkerSaga);
 }
 
 function* settingsGetUsersWatcherSaga() {
-  yield takeLatest(SETTINGS_WATCH_GET_USER, settingsGetUsersWorkerSaga);
+  yield takeLatest(sc.SETTINGS_WATCH_GET_USERS, settingsGetUsersWorkerSaga);
 }
 
 export default  {

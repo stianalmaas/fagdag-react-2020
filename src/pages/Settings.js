@@ -24,7 +24,7 @@ const Settings = ({ routes = [] }) => (
 
 Settings.Pages = {
   User,
-  Admin
+  Admin,
 };
 
 export default Settings;

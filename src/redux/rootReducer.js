@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 import appReducer from '../modules/app/reducer';
-import userReducers from '../modules/settings/user/reducer';
-import todos from '../modules/todo/reducer';
+import { reducer as userReducers } from '../modules/settings/user/';
+import { reducer as todos } from '../modules/todo/';
 
 const settings = combineReducers({
   users: userReducers,

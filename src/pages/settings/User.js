@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getUsersSagaWatchAction } from '../../modules/settings/user/actions';
+import { sagaActions } from '../../modules/settings/user/';
 
 const User = () => {
   const users = useSelector(state => state.settings.users);
@@ -8,18 +8,19 @@ const User = () => {
   const { data, isLoading } = users;
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getUsersSagaWatchAction());
+    dispatch(sagaActions.getUsersSagaWatchAction());
   }, [dispatch]);
 
   return(
     <>
       {
-        isLoading && (<div>Loading...</div>)
-      }
-      {
-        Object.keys(data).length > 0
-          ? Object.keys(data).map(i => (<div key={i}>{data[i].first_name}</div>))
-          : (<div>ingen data</div>)
+        isLoading
+          ? (<div>Loading...</div>)
+          : (
+            Object.keys(data).length > 0
+              ? Object.keys(data).map(i => (<div key={i}>{data[i].first_name}</div>))
+              : <div>No users</div>
+          )
       }
     </>
   )

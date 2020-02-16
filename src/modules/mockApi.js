@@ -7,7 +7,7 @@ export const GetUsers = async () => {
         obj[user.userId] = user;
         return obj;
       }, {}))
-    },  1000)
+    }, 1000)
   });
 };
 
@@ -15,6 +15,6 @@ export const GetUser = async (userId) => {
   return new Promise((resolve) => {
     setTimeout( function() {
       resolve(users.filter(u => u.userId === userId))
-    }, 250)
+    }, 500)
   });
 };
