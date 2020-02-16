@@ -1,6 +1,13 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { addTodo } from '../modules/todo/actions'
+import styled from 'styled-components';
+import StyledButton from '../components/button/Button'
+
+const StyledInput = styled.input`
+  padding: 4px 10px;
+  margin: 4px;
+`;
 
 const AddTodo = ({ dispatch }) => {
   let input
@@ -15,10 +22,10 @@ const AddTodo = ({ dispatch }) => {
         dispatch(addTodo(input.value))
         input.value = ''
       }}>
-        <input ref={node => input = node} />
-        <button type="submit">
+        <StyledInput ref={node => input = node} />
+        <StyledButton type="submit">
           Add Todo
-        </button>
+        </StyledButton>
       </form>
     </div>
   )
