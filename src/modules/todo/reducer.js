@@ -1,11 +1,21 @@
+import { combineReducers } from 'redux'
+import { VisibilityFilters } from './constants'
 import {
   ADD_TODO,
   TOGGLE_TODO,
+  SET_VISIBILITY_FILTER,
 } from './constants';
 
-const initialState = []
+const visibilityFilter = (state = VisibilityFilters.SHOW_ALL, action) => {
+  switch (action.type) {
+    case SET_VISIBILITY_FILTER:
+      return action.filter
+    default:
+      return state
+  }
+}
 
-const reducer = (state = initialState, action) => {
+const data = (state = [], action) => {
   switch (action.type) {
     case ADD_TODO:
       return [
@@ -14,20 +24,19 @@ const reducer = (state = initialState, action) => {
           text: action.text,
           completed: false
         }
-      ];
+      ]
     case TOGGLE_TODO:
-      return state.map((todo, index) => {
-        if (index === action.index) {
-          return Object.assign({}, todo, {
-            completed: !todo.completed
-          });
-        }
-
-        return todo;
-      });
+      return state.map((todo, index) =>
+        index === action.index ? { ...todo, completed: !todo.completed } : todo
+      )
     default:
       return state;
   }
 };
 
-export default reducer;
+const reducers = combineReducers({
+  data,
+  visibilityFilter
+})
+
+export default reducers;
