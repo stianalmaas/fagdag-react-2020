@@ -1,16 +1,22 @@
-import { ADD_TODO, TOGGLE_TODO, SET_VISIBILITY_FILTER } from './constants';
+import { constants } from './index';
 
-export const addTodo = text => ({
-  type: ADD_TODO,
+const addTodo = text => ({
+  type: constants.ADD_TODO,
   text
 });
 
-export const toggleTodo = index => ({
-  type: TOGGLE_TODO,
+const toggleTodo = index => ({
+  type: constants.TOGGLE_TODO,
   index
 });
 
-export const setVisibilityFilter = filter => ({
-  type: SET_VISIBILITY_FILTER,
+const setVisibilityFilter = filter => ({
+  type: constants.SET_VISIBILITY_FILTER,
   filter
 });
+
+export default {
+  addTodo,
+  toggleTodo,
+  setVisibilityFilter
+};

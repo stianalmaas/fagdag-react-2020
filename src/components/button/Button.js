@@ -17,6 +17,6 @@ Button.propTypes = {
   active: PropTypes.bool,
   children: PropTypes.node.isRequired,
   onClick: PropTypes.func,
-}
+};
 
 export default Button

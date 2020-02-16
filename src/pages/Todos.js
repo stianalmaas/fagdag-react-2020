@@ -1,6 +1,6 @@
 import React from "react";
-import AddTodo from '../containers/AddTodo';
-import VisibleTodoList from '../containers/VisibleTodoList';
+import AddTodo from './todos/AddTodo';
+import VisibleTodoList from './todos/VisibleTodoList';
 import Filters from '../components/Filters'
 
 const Todos = () => (

@@ -1,8 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { addTodo } from '../modules/todo/actions'
+import { actions } from '../../modules/todo'
 import styled from 'styled-components';
-import StyledButton from '../components/button/Button'
+import StyledButton from '../../components/button/Button'
 
 const StyledInput = styled.input`
   padding: 4px 10px;
@@ -10,16 +10,16 @@ const StyledInput = styled.input`
 `;
 
 const AddTodo = ({ dispatch }) => {
-  let input
+  let input;
 
   return (
     <div>
       <form onSubmit={e => {
-        e.preventDefault()
+        e.preventDefault();
         if (!input.value.trim()) {
           return
         }
-        dispatch(addTodo(input.value))
+        dispatch(actions.addTodo(input.value));
         input.value = ''
       }}>
         <StyledInput ref={node => input = node} />
