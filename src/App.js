@@ -5,14 +5,11 @@ import { Router, Switch, Link } from "react-router-dom";
 import { history, routes, RouteWithSubRoutes } from "./routes";
 
 import {
-  AppContainer,
-  GlobalStyle,
   StyledSideBar,
   MenuList,
   StyledMenuItem,
   StyledMain
 } from "./app/app.styles";
-
 
 const App = () => {
   return (

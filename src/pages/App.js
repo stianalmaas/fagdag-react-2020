@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import './app/App.css';
 import { getDataSagaWatchAction } from '../modules/app/actions';
 
+//remark: this page is not in use. Default from CRA
 const App = () => {
   const dispatch = useDispatch();
   return (
