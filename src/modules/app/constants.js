@@ -1,1 +1,1 @@
-export const APP_WATCH_GET_DATA = 'app/WATCH_GET_DATA';
+export const APP_WATCH_GET_DATA = 'MODULES/APP/WATCH_GET_DATA';
