@@ -7,31 +7,24 @@ const getUser = userId => GetUser(userId);
 const getUsers = () => GetUsers();
 
 function* settingsGetUserWorkerSaga(args) {
-  /*const { userId } = args;
+  const { userId } = args;
   try {
     yield put(actions.getUser());
     const user = yield call(getUser, userId);
     yield put(actions.getUserSuccess({ user }));
   } catch (e) {
     yield put(actions.getUserFailure(e))
-  }*/
-
-
+  }
 }
 
 function* settingsGetUsersWorkerSaga() {
-
-  //Oppgave 2
-
-  /*try {
+  try {
     yield put(actions.getUsers());
     const users = yield call(getUsers);
     yield put(actions.getUsersSuccess({ users }));
   } catch (e) {
     yield put(actions.getUsersFailure(e))
-  }*/
-
-
+  }
 }
 
 function* settingsGetUserWatcherSaga() {

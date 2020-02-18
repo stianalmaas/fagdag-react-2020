@@ -10,8 +10,7 @@ const settingsInitialState = {
 const reducer = (state = { ...settingsInitialState }, action) => {
   const { error } = action;
   switch (action.type) {
-    //Oppgave 3
-   /* case c.SETTINGS_GET_USERS:
+    case c.SETTINGS_GET_USERS:
       return {
         ...state,
         isLoading: true,
@@ -53,7 +52,7 @@ const reducer = (state = { ...settingsInitialState }, action) => {
         users: [],
         isLoading: false,
         error,
-      };*/
+      };
     default: return state;
   }
 };
