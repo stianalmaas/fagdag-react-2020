@@ -36,6 +36,8 @@ function* settingsGetUsersWatcherSaga() {
 }
 
 export default  {
+  getUser,
   settingsGetUserWatcherSaga,
   settingsGetUsersWatcherSaga,
+  settingsGetUserWorkerSaga
 };
