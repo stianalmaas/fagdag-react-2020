@@ -57,7 +57,7 @@ export const GlobalStyle = createGlobalStyle`
 
   :root {
     ${sonatWebLibraryColors};
-    font-family: 'Verdana', sans-serif;
+    font-family: 'Roboto';
   }
   #root, body, html {
     width: 100%;
