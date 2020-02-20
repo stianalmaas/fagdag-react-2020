@@ -11,15 +11,11 @@ import {
 } from "./app/app.styles";
 
 const darkTheme = {
-  backgroundColor: "var(--sonat-web-library-color-coal)",
-  color: "var(--sonat-web-library-color-snow)",
-  hoverColor: "var(--sonat-web-library-color-snow)"
+
 };
 
 const lightTheme = {
-  backgroundColor: "var(--sonat-web-library-color-snow)",
-  color: "var(--sonat-web-library-color-gray)",
-  hoverColor: "var(--sonat-web-library-color-coal)"
+
 };
 
 
