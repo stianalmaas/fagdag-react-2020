@@ -19,16 +19,16 @@ export const StyledMenuItem = styled.li`
   }
 
   a:hover {
-    color: var(--sonat-web-library-color-snow);
+    color:  ${({ theme }) => theme.hoverColor};
   }
 `;
 
 export const StyledSideBar = styled.aside`
   width: 228px;
   min-height: 100vh;
-  background: #122932;
+  background: ${({ theme }) => theme.backgroundColor};
   position: fixed;
-  color: white;
+  color: ${({ theme }) => theme.color};
   padding: 1.5rem;
   font-weight: normal;
   line-height: 2rem;
@@ -78,5 +78,5 @@ export const AppContainer = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  background-color: ${backgroundColor};
+
 `;
