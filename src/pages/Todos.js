@@ -5,9 +5,7 @@ import Filters from '../components/Filters'
 
 const Todos = () => (
 	<div>
-		<Filters />
 		<AddTodo />
-		<VisibleTodoList />
 	</div>
 );
 

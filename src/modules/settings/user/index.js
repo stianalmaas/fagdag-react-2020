@@ -3,12 +3,12 @@ import allConstants from './constants';
 import allActions from './actions';
 
 export const constants = {
-  SETTINGS_GET_USERS: allConstants.SETTINGS_GET_USERS,
+  /* SETTINGS_GET_USERS: allConstants.SETTINGS_GET_USERS,
   SETTINGS_GET_USERS_SUCCESS: allConstants.SETTINGS_GET_USERS_SUCCESS,
   SETTINGS_GET_USERS_FAILED: allConstants.SETTINGS_GET_USERS_FAILED,
   SETTINGS_GET_USER: allConstants.SETTINGS_GET_USER,
   SETTINGS_GET_USER_SUCCESS: allConstants.SETTINGS_GET_USER_SUCCESS,
-  SETTINGS_GET_USER_FAILED: allConstants.SETTINGS_GET_USER_FAILED,
+  SETTINGS_GET_USER_FAILED: allConstants.SETTINGS_GET_USER_FAILED, */
 };
 
 export const sagaConstants = {

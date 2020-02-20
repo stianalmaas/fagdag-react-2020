@@ -9,7 +9,6 @@ const settings = combineReducers({
 
 const reducer = combineReducers({
   appReducer,
-  todos,
   settings,
 });
 
