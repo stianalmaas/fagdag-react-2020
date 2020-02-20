@@ -1,34 +1,32 @@
 import styled, { createGlobalStyle } from "styled-components";
-import theme from "styled-theming";
 import sonatWebLibraryColors from "./webLibrary.colors";
 import typography from "./typography";
 import fontFace from "./font";
-import { variables } from "./typography";
+
+// oppg 1 - fyll ut styling for de forskjellige styled-components
+// oppg 2 - bruk props til å styre darkmode i menysystemet
 
 export const MenuList = styled.ul`
   list-style: none;
   padding-inline-start: 0;
 `;
 
+// oppg 3. bruk theming variabler her
+// oppg 4. bruk typographyklassene her (attrs)
 export const StyledMenuItem = styled.li`
   a {
-    padding: 0.4rem 0.4rem 0.4rem 2rem;
-    text-decoration: none;
-    ${variables["sonat-typography__regular--xx-large--gray"]};
-    display: block;
+
   }
 
   a:hover {
-    color:  ${({ theme }) => theme.hoverColor};
+
   }
 `;
 
 export const StyledSideBar = styled.aside`
   width: 228px;
   min-height: 100vh;
-  background: ${({ theme }) => theme.backgroundColor};
   position: fixed;
-  color: ${({ theme }) => theme.color};
   padding: 1.5rem;
   font-weight: normal;
   line-height: 2rem;
@@ -66,10 +64,6 @@ export const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const backgroundColor = theme("mode", {
-  light: "var(--bob-web-library-color-mint20)",
-  dark: "var(--bob-web-library-color-violet-darker)"
-});
 
 export const AppContainer = styled.div`
   overflow: hidden;
@@ -78,5 +72,4 @@ export const AppContainer = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-
 `;

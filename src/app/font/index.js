@@ -9,6 +9,5 @@ export default css`
     src: url(${RobotoRegular}) format('opentype');
     font-style: normal;
     font-weight: 400;
-  }
-  
+  }  
 `;
