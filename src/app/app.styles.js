@@ -13,13 +13,15 @@ export const MenuList = styled.ul`
 
 // oppg 3. bruk theming variabler her
 // oppg 4. bruk typographyklassene her (attrs)
-export const StyledMenuItem = styled.li`
+export const StyledMenuItem = styled.li.attrs(() => ({
+  className: 'sonat-typography__regular--medium--gray'
+}))`
   a {
-
+    font-weight: bold;
   }
 
   a:hover {
-
+    font-size: 110%;
   }
 `;
 
@@ -30,6 +32,11 @@ export const StyledSideBar = styled.aside`
   padding: 1.5rem;
   font-weight: normal;
   line-height: 2rem;
+  background-color: ${props => props.theme.backgroundColor};
+  a {
+    color: ${props => props.theme.color};
+  }
+  
 `;
 
 export const StyledMain = styled.main`
@@ -43,6 +50,11 @@ export const StyledMain = styled.main`
   right: 0;
   bottom: 0;
   padding: 3rem;
+  background-color: ${props => props.theme.backgroundColor};
+  a {
+    color: ${props => props.theme.color};
+  }
+
 `;
 
 export const GlobalStyle = createGlobalStyle`

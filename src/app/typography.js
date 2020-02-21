@@ -27,6 +27,14 @@ const getFontWeight = type => {
 const createTypography = ({ type, fontSize, color }) =>
   `
   //Oppg 4 fyll inn her
+    .sonat-typography__${type}--${fontSize}--${color} {
+      ${getFontWeight(type)};
+      font-size: ${sizes[fontSize]};
+      color: ${color};
+      a {
+        color: ${color};
+      }
+    }
   `;
 
 

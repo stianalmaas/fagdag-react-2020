@@ -11,11 +11,13 @@ import {
 } from "./app/app.styles";
 
 const darkTheme = {
-
+    backgroundColor: 'black',
+    color: 'yellow'
 };
 
 const lightTheme = {
-
+    backgroundColor: 'white',
+    color: 'blue'
 };
 
 
