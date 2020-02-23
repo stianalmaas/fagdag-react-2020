@@ -1,8 +1,13 @@
 import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { sagaActions } from '../../modules/settings/user/';
 
 const User = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(sagaActions.getUsersSagaWatchAction());
+  });
 
   //Oppgave 3.4
   const data = {};

@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { actions } from '../../modules/todo'
 import styled from 'styled-components';
-import StyledButton from '../../components/button/Button'
+import StyledButton from '../../components/button/Button';
 
 const StyledInput = styled.input`
   padding: 4px 10px;
@@ -23,10 +23,11 @@ const AddTodo = ({ dispatch }) => {
         input.value = ''
       }}>
         <StyledInput ref={node => input = node} />
-        <StyledButton type="submit">
+        <StyledButton type="submit" >
           Add Todo
         </StyledButton>
       </form>
+
     </div>
   )
 };

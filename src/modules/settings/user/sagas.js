@@ -11,9 +11,16 @@ function* settingsGetUserWorkerSaga(args) {
 }
 
 function* settingsGetUsersWorkerSaga() {
-  // console.log('***RUN***'); 3.1
+  console.log('***RUN***');
   // Oppgave 3.2
-
+  yield put(actions.getUsers);
+  let userData;
+  try {
+    userData = call(GetUsers);
+  } catch (e) {
+    yield put(actions.getUsersFailure);
+  }
+  yield put(actions.getUsersSuccess(userData));
 }
 
 function* settingsGetUserWatcherSaga() {
