@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
-import constants from "./constants";
+import constants, { VisibilityFilters } from "./constants";
 
-const data = (state = {todos: []}, action) => {
+const data = (state = {todos: [], filter: VisibilityFilters.SHOW_ALL}, action) => {
     // console.log("todoreducer - action: ", action)
     switch (action.type) {
         case constants.ADD_TODO:
@@ -16,6 +16,12 @@ const data = (state = {todos: []}, action) => {
             };
             newState.todos[action.index] = {...newState.todos[action.index], active: !newState.todos[action.index].active};
             return newState;
+            break;
+        case constants.SET_VISIBILITY_FILTER:
+            return {
+                ...state,
+                filter: action.filter
+            };
             break;
         default:
             return state;
